@@ -22,7 +22,19 @@ public INode<K> root;
 			return currentRoot;
 		}
 	}
-	
+	public INode<K> search(K key){
+		return searchRecursively(root,key);
+	}
+	public INode<K> searchRecursively(INode<K> currentNode,K key){
+		if(currentNode==null)
+			return null;
+		if(currentNode.getKey()==key)
+			return currentNode;
+		else if(currentNode.getKey().compareTo(key)>0)
+			return searchRecursively(currentNode.getLeft(),key);
+		else
+			return searchRecursively(currentNode.getRight(),key);
+	}
 	public int getSize() {
 		return getSizeRecursively(root);
 	}
