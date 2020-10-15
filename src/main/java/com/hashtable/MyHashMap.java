@@ -1,7 +1,7 @@
 package com.hashtable;
 
 public class MyHashMap<K,V> {
-     MyLinkedList<K> myLinkedList;
+MyLinkedList<K> myLinkedList;
 	
 	public MyHashMap() {
 		this.myLinkedList=new MyLinkedList<>();
@@ -33,5 +33,4 @@ public class MyHashMap<K,V> {
 	}
 	public int getSize() {
 		return this.myLinkedList.lenList();
-	}
-}
+	}}

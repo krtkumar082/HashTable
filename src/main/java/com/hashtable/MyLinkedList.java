@@ -138,13 +138,14 @@ public class MyLinkedList<K> {
 	}
 	
 	public void printList() {
-		if(this.head!=null) {
-			INode temp=head;
-			while(temp!=null) {
-				System.out.print(temp.getKey()+ "->");
-				temp=temp.getNext();
-			}
-			System.out.println(" ");
+		StringBuffer myNodes=new StringBuffer("My Nodes....");
+		INode tempNode=head;
+		while(tempNode.getNext()!=null) {
+			myNodes.append(tempNode.getKey()+"-->");
+			tempNode=tempNode.getNext();
 		}
+		myNodes.append(tempNode.getKey());
+		System.out.println(myNodes);
+		
 	}
 }
