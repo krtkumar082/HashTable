@@ -22,6 +22,7 @@ public INode<K> root;
 			return currentRoot;
 		}
 	}
+	
 	public int getSize() {
 		return getSizeRecursively(root);
 	}
